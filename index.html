@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+
+<link rel="stylesheet" type="text/css" href="list.css">
+	<title>Talking List</title>
+</head>
+
+<body>
+<header>
+<h1>Talking App</h1>
+</header>
+<body ng-controller="myController">
+      
+                  
+          <button ng-click="addWord()">Words</button> 
+          <button ng-click="addPhrase()">More Words</button>
+          <button ng-click="addClass()">Words with Decorations</button>
+          <button ng-click="addPhraseClass()">More Words with Decorations</button>
+          
+          
+     
+
+			<!--<button ng-click="">Talk!</button>-->
+			
+			<ul>
+				<li ng-class="[item.style1, item.style2];" ng-repeat="item in arr track by $index">{{ item.text }}</li>
+			</ul>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script type="text/javascript" src="list.js"></script>
+</body>
+</html>
